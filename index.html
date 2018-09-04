@@ -88,8 +88,33 @@
       <h2>Заинтересовались?</h2>
       <p class="seach-info"> Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="" href="form.html">Поиск гостиницы в Седоне</a>
-      <div class="searh-form">
-        <form action="/">
+      <div class="search-form">
+        <form class="search-date" action="https://echo.htmlacademy.ru" method="post">
+          <div class="search-field">
+            <label for="field-1">Дата заезда:</label>
+            <input class="field-data" name="data1" type="text" placeholder="24 апреля 2017" id="field-1">
+          </div>
+          <div class="search-field"> 
+            <label for="field-2">Дата выезда:</label>
+            <input class="field-data-data" name="data2" type="text" placeholder="4 июля 2017" id="field-2">
+          </div>
+          <div class="search-field">
+            <div class="search-field-person">
+              <label for="field-3">Взрослые:</label> 
+              <div class="field-person-minus-plus">
+                <button class="btn-person-minus" type="button">Минус</button>
+                <input class="field-person" name="adults" type="text" value="2" id="field-3">
+                <button class="btn-person-plus" type="button">Плюс</button>
+              </div>
+              <label for="field-4">Дети:</label>
+              <div class="field-person-minus-plus">
+                <button class="btn-person-minus" type="button">Минус</button>
+                <input class="field-person" name="children" type="text" value="0" id="field-4">
+                <button class="btn-person-plus" type="button">Плюс</button>
+              </div>
+            </div>  
+          </div>
+          <button class="form-btn" type="submit">Найти</button>
         </form>
       </div>
     </section>

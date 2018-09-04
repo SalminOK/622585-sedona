@@ -22,7 +22,7 @@
     <h1 class="visually-hidden">Поиск гостиниц</h1>
     <section class="filters">
       <h2 class="visually-hidden">Фильтр поиска гостиницы</h2>
-      <form action="/">
+      <form action="#" method="get" action="">
         <div class="filters-checkbox">
           <div class="checkbox-list">
             <h3></h3>
@@ -44,18 +44,30 @@
           </div>
         </div>
         <div class="filters-range">
+          <p class="filters-title">Стоимость в сутки (р):</p>
+          <div class="range-price">
+            от<input class="price-min" type="text" value="0">
+            до<input class="price-max" type="text" value="3000">
+          </div>
+          <!--Ползунок-->
+          <button class="btn-range" type="submit">Показать</button>
         </div>
       </form>
     </section>
     <section class="sorting">
-      <h2></h2>
+      <h2 class="visually-hidden">Сортировка по поиску гостиницы</h2>
       <div class="sorting-block">
-        <h4></h4>
-        <ul></ul>
+        <h4>Найдено:3</h4>
+        <p>Сортировка:</p>
+        <ul>
+          <li><a href="#">по цене</a></li> 
+          <li><a href="#">по типу</a></li> 
+          <li><a href="#">по рейтингу</a></li> 
+        </ul>
       </div>
       <div class="sorting-links">
-        <a href=""></a>
-        <a href=""></a>
+        <a href="#"class="link-top"></a>
+        <a href="#"class="link-bottom"></a>
       </div> 
     </section>
     <section class="hotel-list">
