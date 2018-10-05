@@ -33,11 +33,6 @@ img {
   overflow: hidden;
 }
 
-.inner-page {
-  color: #000000;
-  background-color: #fefefe; 
-}
-
 .button {
   font: inherit;
   text-align: center;
@@ -270,6 +265,7 @@ img {
   font-size: 14px ;
   line-height: 21px;
   font-weight: 400;
+  color: #333333;
   margin-top: 20px; 
 }
 
@@ -306,6 +302,7 @@ img {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  color: #333333;
   margin: 0 auto;
   padding-top: 22px;
   width: 265px; 
@@ -315,9 +312,7 @@ img {
   position: relative;
   background-color: #ffffff;
   text-align: center;
-  min-height: 292px;
-  padding: 50px 100px 0px;
-  box-sizing: border-box;  
+  padding-top: 50px; 
 }
 
 .search h2 {
@@ -326,7 +321,6 @@ img {
   font-weight: 700;
   margin: 0px;
   padding: 0px;
-  margin-top: 0px;
   margin-bottom: 25px;  
 }
 
@@ -334,13 +328,10 @@ img {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: #333333;
-  margin: 0px; 
-  padding: 0px;
+  margin-bottom: 47px;
 }
 
 .search-button {
-  position: relative;
   background-color: #766357;
   color: #ffffff;
   width: 568px;
@@ -349,11 +340,8 @@ img {
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  border-style: none;
   outline: none;
-  padding-bottom: 0px;
-  margin-top: 47px;
-  z-index: 2;
+  border-style: none;
 }
 
 .search-button:hover,
@@ -373,15 +361,20 @@ img {
   padding: 0px;
   width: 100%;
   min-height: 470px;
-  z-index: 2;
 }
 
 .map-iframe {
-  position: absolute;
+  position: relative;
   min-height: 593px;
   width: 1200px;
   border: none;
-  z-index: 0;
+}
+
+.map p {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
 }
 
 .search-form {
@@ -391,7 +384,7 @@ img {
   justify-content: space-between;
   align-content: space-between;
   width: 568px;
-  min-height: 396px;
+  min-height: 395px;
   box-sizing: border-box; 
   box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.2);
   background-color: #ffffff;
@@ -399,48 +392,7 @@ img {
   top: 100%;
   left: 50%;
   margin-left: -284px;
-  z-index: 3;
-  animation-name: popup;
-}
-
-@keyframes popup {
-  0% {
-    transform: translateY(-500px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
+  z-index: 2;
 }
 
 .modal-search-show {
@@ -457,6 +409,7 @@ img {
   justify-content: space-between;
   box-sizing: border-box;
   margin-top: 0px;
+  margin-bottom: 28px;
 }
 
 .search-form p:nth-child(1),
@@ -483,9 +436,11 @@ img {
   padding-top: 5px;
   background-color: #ffffff;
   color: #000000;
+  margin-right: 15px;
 }
 
-.search-form input {
+.search-date-input,
+.search-old-input {
   box-sizing: border-box;
   border: none;
   background-color: #f2f2f2;
@@ -500,7 +455,7 @@ img {
   box-sizing: border-box;
   width: 345px;
   padding-right: 43px;
-  padding-left: 10px;
+  padding-left: 11px;
 }
 
 .search-date-input:hover {
@@ -528,6 +483,7 @@ img {
   height: 22px;
   border-style: none;
   outline: none;
+  background-color: inherit;
 }
 
 .button-calendar path {
@@ -587,7 +543,7 @@ img {
 }
 
 .btn-search {
-  width: 459px;
+  width: 460px;
   min-height: 58px;
   border-style: none;
   text-transform: uppercase;
@@ -924,6 +880,7 @@ img {
   min-height: 86px;
   width: 1200px;
   border-bottom: 1px solid #e5e5e5;
+  background-color: #fefefe;
 }
 
 .sorting-block {
@@ -1015,11 +972,15 @@ img {
   fill: #83b4d3;
 }
 
+.hotel-catalog {
+  background-color: #fefefe;
+}
+
 .hotel-item {
   display: flex; 
   flex-wrap: wrap;
   min-height: 150px;
-  padding: 5px 72px 3px 72px;
+  padding: 5px 72px;
   border-bottom: 1px solid #e5e5e5;
   box-sizing: border-box;
 }
@@ -1058,6 +1019,7 @@ margin-right: 30px;
   margin-bottom: 14px; 
   margin-top: 8px;
   margin-right: 5px;
+  color: #333333;
 }
 
 .hotel-container {
@@ -1085,10 +1047,12 @@ margin-right: 30px;
   line-height: 27px;
   font-size: 14px;
   display: inline-block;
+  padding: 0px;
 }
 
 .button-blue {
   background-color: #81b3d2;
+  width: 110px;
 }
 
 .button-blue:hover,
@@ -1103,6 +1067,8 @@ margin-right: 30px;
 
 .button-brown {
   background-color: #766357;
+  width: 142px;
+  margin-left: 5px;
 }
 
 .button-brown:hover
