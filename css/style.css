@@ -105,8 +105,6 @@ img {
 }
 
 .main-header-logo {
-  width: 140px;
-  height: 71px;
   position: absolute;
   order: 3;
   z-index: 1;
@@ -128,7 +126,7 @@ img {
   color: #cacaca;
 }
 
-.site-navigation-current {
+a.active {
   color:#766357;
   font-weight: 700;
 }
@@ -293,9 +291,8 @@ img {
   line-height: 21px;
   font-weight: 700;
   color: #000000;
-  padding-top: 0 auto;
   margin: 0 auto;
-  width: 160px;
+  width: 158px;
 }
 
 .reasons-numbers-item p {
@@ -570,12 +567,13 @@ img {
   display: flex;
   min-height: 120px;
   background-color: #ffffff;
+  padding-top: 8px;
 }
 
 .index-footer {
   position: relative;
   opacity: 0.9;
-  margin-top: -120px;
+  margin-top: -128px;
   z-index: 2; 
 }
 
@@ -641,14 +639,15 @@ img {
   justify-content: center;
   align-items: center;
   width: 400px;
-  padding-left: 348px;
+  padding-left: 347px;
   max-height: 120px;
-  margin-bottom: 16px; 
+  margin-bottom: 18px; 
   text-align: center;
 }
 
 .footer-copyright p {
   margin: 5px; 
+  margin-right: 10px;
 }
 
 .footer-copyright a {
@@ -691,10 +690,8 @@ img {
 
 .checkbox-list h3 {
   color: #ffffff;
-  font-size : 16 px ;
-  line-height : 21 px ;
   font-weight : 700 ;
-  margin-bottom : 25px;
+  margin-bottom: 25px;
   padding-left: 72px;
   padding-top: 11px; 
 }
@@ -771,7 +768,7 @@ img {
 
 .price-controls {
   position: relative;
-  height: 36px;
+  height: 32px;
   margin-bottom: 20px;
   font-size: 0;
   border: 2px solid #ffffff;
@@ -792,7 +789,7 @@ img {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 31px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -855,17 +852,23 @@ img {
 
 .btn-transparent {
   display: block;
-  margin: 0 auto;
+  margin: 0px auto;
   padding: 5px 35px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 21px;
   color: #ffffff;
   text-transform: uppercase;
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
-  width: 137px;
+  width: 138px;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-family: "PT Sans", Arial , sans-serif;
+  font-weight: 400;
+  position: relative;
+  left: -6px;
 }
 
 .btn-transparent:hover,
@@ -979,8 +982,8 @@ img {
 .hotel-item {
   display: flex; 
   flex-wrap: wrap;
-  min-height: 150px;
   padding: 5px 72px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #e5e5e5;
   box-sizing: border-box;
 }
@@ -1037,6 +1040,10 @@ margin-right: 30px;
   height: 28px;
 }
 
+.hotel-price p {
+  padding-left: 6px;
+}
+
 .button {
   color: #ffffff;
   padding-left: 13px;
@@ -1086,7 +1093,9 @@ margin-right: 30px;
   flex-direction: column;
   align-items: flex-end;
   margin-left: auto;
-  
+  padding-top: 24px;
+  justify-content: space-between;
+  height: 91px;
 }
 
 .raiting p {
@@ -1095,16 +1104,14 @@ margin-right: 30px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  width: 106px;
-  height: 25px;
-  margin-top: 45px;
-  margin-bottom: 23px;
-  
+  padding: 4px 11px 3px 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   background-color: #f2f2f2;
 }
 
 .raiting-stars {
-  margin-top: auto;
+  margin-top: 0px;
   text-align: right;
 }
 
@@ -1113,5 +1120,6 @@ margin-right: 30px;
   width: 18px;
   height: 17px;
   background: url("../img/star.svg");
+  margin-left: 2px;
 }
 
