@@ -132,7 +132,7 @@ a.active {
 }
 
 .promo {
-  background-color: #ffffff;
+  background-color: #d2e5f1;
   background-image: url("../img/background-photo.jpg");
   background-repeat: no-repeat; 
   background-position: 0px -55px;
@@ -287,6 +287,7 @@ a.active {
 
 .reasons-numbers-item h3 {
   display: inline-block;
+  vertical-align: top;
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
@@ -358,6 +359,7 @@ a.active {
   padding: 0px;
   width: 100%;
   min-height: 470px;
+  z-index: 2;
 }
 
 .map-iframe {
@@ -365,6 +367,7 @@ a.active {
   min-height: 593px;
   width: 1200px;
   border: none;
+  z-index: 1;
 }
 
 .search-form {
@@ -382,16 +385,35 @@ a.active {
   top: 100%;
   left: 50%;
   margin-left: -284px;
-  z-index: 2;
+  animation-name: popup;
+  animation-direction: 0,6s;
+  z-index: 3;
 }
 
-.modal-search-show {
-  display: block;
-  animation: popup 0.6s;
+.modal-show {
+  display: none;
 }
 
-.modal-error {
-  animation: shake 0.6s;
+@keyframes popup {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .search-form p {
@@ -1047,6 +1069,7 @@ margin-right: 30px;
   line-height: 27px;
   font-size: 14px;
   display: inline-block;
+  vertical-align: top;
   padding: 0px;
 }
 
@@ -1110,6 +1133,7 @@ margin-right: 30px;
 
 .raiting-stars span {
   display: inline-block;
+  vertical-align: top;
   width: 18px;
   height: 17px;
   background: url("../img/star.svg");
